@@ -1,0 +1,124 @@
+* {
+  @include box-sizing;
+  line-height: 1.5;
+}
+
+html,
+body {
+  color: $default-color;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $serif-primary;
+  font-size: 14px;
+  overflow-y: scroll;
+
+  @media (min-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $default-shade;
+  font-family: $sans-serif;
+  line-height: normal;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+}
+
+blockquote {
+  border-left: .35rem solid $grey-2;
+  color: $grey-1;
+  margin: 1.8rem 0;
+  padding: .5rem 1rem;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 600px) {
+    padding: 0 5rem 0 1.25rem;
+  }
+}
+
+img {
+  display: block;
+  margin: 0 0 1rem;
+  max-width: 100%;
+}
+
+td {
+  vertical-align: top;
+}
+
+
+
+// ----------------------------------------
+// // ------ tables config ------
+// ----------------------------------------
+
+// ----------------------------------------
+// // ------ colors ------
+// ----------------------------------------
+
+$table-border-color: $grey-2;
+
+// ----------------------------------------
+// // ------ demo container settings ------
+// ----------------------------------------
+
+$container-width: 88%;
+$container-max-width: 40em;
+
+// ----------------------------------------
+// // ------ table settings ------
+// ----------------------------------------
+
+$table-border-width: .071428571em;
+$table-border-style: solid;
+$table-margin-top: 1.529411765em;
+$table-margin-bottom: 1.529411765em;
+$table-cell-padding: .270588235em;
+$table-cell-text-align: left;
+$table-cell-border-top: $table-border-width $table-border-style $table-border-color;
+$table-header-font-weight: bold;
+$table-body-border-top: .342857143em $table-border-style $table-border-color;
+$table-condensed-padding: .294117647em;
+$table-bordered-border: $table-border-width $table-border-style $table-border-color;
+$table-bordered-border-radius: .470588235em;
+$table-border-left: $table-border-width $table-border-style $table-border-color;
+$table-bordered-child-radius: .470588235em;
+
+
+table.type1 {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-block: 0.2rem solid $table-border-color;
+  margin-top: $table-margin-top;
+  margin-bottom: $table-margin-bottom;
+  text-align: $table-cell-text-align;
+  vertical-align: top;
+}
+
+th,td {
+  padding: $table-cell-padding
+}
+
+tr:first-child th{
+  border-bottom: 0.2rem solid $table-border-color;
+}

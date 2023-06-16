@@ -1,16 +1,19 @@
 # Site settings
-title:          'Joongyeub Yeo'
-description:    "Joongyeub Yeo. Personal blog. Talk about data, model and life."
+title:          Joongyeub Yeo
+description:    Joongyeub Yeo. Personal blog. Talk about data, model and life.
 # baseurl:        ""
-url:            "https://uriyeobi.github.io"
+url:            https://uriyeobi.github.io
+
+# google site verification
+google_site_verification: Tu6DZsPqPksZKECu7d1h0Nth0zS8S5vQDj9MOEHX-YI
 
 # Google Analytics
-google_analytics: UA—XXXXXXXX-X
+google_analytics: G-FNE6B1863H
 
 # Author
 author:
   name:         Joongyeub Yeo
-  url:          https://uriyeobi.gitub.io
+  url:          https://uriyeobi.github.io
   email:        uriyeobi@gmail.com
 
 # Build settings
@@ -26,6 +29,7 @@ sass:
 # Gems
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
   # - jemoji #Uncomment this to allow emoji in your post

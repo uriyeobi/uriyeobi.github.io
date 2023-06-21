@@ -9,6 +9,8 @@ tags: 'NeuralNetworks'
 # hidden: true
 ---
 
+
+
 # Laplace's view
 
 Laplace embraced the view[^1] that if we know the positions and velocities of all the particles in the universe, then we would know the future for all time. 
@@ -220,7 +222,7 @@ The phase diagram and trajectories shows the coupling relation between $\theta_1
 
 # Predicting pendulum *time-series* - ARIMA?
 
-So far we have seen that the single pendulum exhibits periodic dynamics, while the double pendulum exhibits more chaotic and non-linear dynamics. 
+So far we have seen that the single pendulum exhibits periodic dynamics, while the double pendulum exhibits more chaotic and nonlinear dynamics. 
 
 Here we attempt to predict the time-series of pendulum phase states. [**ARIMA**](https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average) is one of the most commonly used methods to model univariate time-series. Its extension to reflect seasonality is SARIMA. 
 

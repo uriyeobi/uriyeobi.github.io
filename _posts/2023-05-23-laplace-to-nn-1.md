@@ -11,6 +11,9 @@ tags: 'NeuralNetworks'
 
 Time-series predictions have been always interesting to me (and it's been very hard for me), but I realized that I had never thought about predicting the time-series of physical system dynamics. So I looked up something from my old physics books and gave it a shot.
 
+---
+
+<br>
 # Laplace's view
 
 Laplace embraced the view[^1] that if we know the positions and velocities of all the particles in the universe, then we would know the future for all time. 

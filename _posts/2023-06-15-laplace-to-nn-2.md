@@ -19,6 +19,9 @@ Well, we know from [universal approximation theorem of neural networks](https://
 
 This post is particularly motivated by a recent [paper](https://arxiv.org/abs/1906.01563), which exploits the concepts of Hamiltonian mechanics.
 
+---
+<br>
+
 # Hamiltonian Mechanics
 Hamiltonian of a system is expressed by [generalized coordinates $q$ and momenta $p$](https://en.wikipedia.org/wiki/Generalized_coordinates):
 

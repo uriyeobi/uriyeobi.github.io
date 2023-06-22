@@ -9,7 +9,7 @@ tags: 'NeuralNetworks'
 # hidden: true
 ---
 
-
+Time-series predictions have been always interesting to me (and it's been very hard for me), but I realized that I had never thought about predicting the time-series of physical system dynamics. So I looked up something from my old physics books and gave it a shot.
 
 # Laplace's view
 

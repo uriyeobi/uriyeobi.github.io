@@ -5,9 +5,9 @@ author: "Chester"
 permalink: /about/
 ---
 
-Hi! I'm **Joongyeub**, currently a Machine Learning Scientist at [Infima Technologies](https://infima.io). 
+Hi! I'm **Joongyeub**, currently a Machine Learning Scientist at [Infima Technologies](https://infima.io), a Stanford spinoff for predictive solutions for mortgages.
 
-I grew up in South Korea and previously studied at [Seoul National University](https://physics.snu.ac.kr/en) and at [Stanford](https://icme.stanford.edu). I've been working at a bank and startups, doing quantitative research and data science. My recent interests are broadly in applied AI and fintech. In general, I prefer examples to theories, executions to ideas, and real data to simulated data.
+I grew up in South Korea and previously studied [Physics at Seoul National University](https://physics.snu.ac.kr/en) and [Computational Math at Stanford](https://icme.stanford.edu). I started my career as a quantitative researcher at an investment bank, and then switched to a few fintech startups focusing more on real-world applications of ML. In general, I prefer [examples to theorems](https://www.jstor.org/stable/3482917?seq=1), [executions to ideas](https://www.maddyness.com/uk/2020/12/31/ideas-are-easy-execution-is-everything/), and [real-world data to simulated data](https://statmodeling.stat.columbia.edu/2021/02/19/fake-data-simulation-why-does-it-work-so-well/).
 
 This place is to share my experience with models and data, and thoughts on things around me. 
 

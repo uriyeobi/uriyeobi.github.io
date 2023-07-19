@@ -3,7 +3,7 @@ layout: post
 title: "Statistical Mechanics and Statistical Inference"
 # use_math: true
 # comments: true
-tags: 'Physics Entropy StatisticalMechanics VariationalInference'
+tags: 'Physics StatisticalInference'
 # excerpt_separator: <!--more-->
 # sticky: true
 # hidden: true

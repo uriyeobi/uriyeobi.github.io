@@ -3,7 +3,7 @@ layout: post
 title: "From Laplace to Neural Networks (Part 2)"
 # use_math: true
 # comments: true
-tags: 'NeuralNetworks'
+tags: 'Physics NeuralNetworks'
 # excerpt_separator: <!--more-->
 # sticky: true
 # hidden: true

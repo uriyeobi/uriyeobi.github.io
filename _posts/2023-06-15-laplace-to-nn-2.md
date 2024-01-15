@@ -12,7 +12,7 @@ tags: 'Physics NeuralNetworks'
 
 We continue the discussion in [Part 1](https://uriyeobi.github.io/2023-05-23/laplace-to-nn-1), but now using neural networks. Can neural networks really predict a nonlinear system like double pendulum?
 
-<img src="https://github.com/uriyeobi/PIML/blob/main/notebooks/fig/double_pendulum.gif?raw=true" width="400rem">
+<img src="https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/fig/double_pendulum.gif?raw=true" width="400rem">
 
 
 Well, we know from [universal approximation theorem of neural networks](https://en.wikipedia.org/wiki/Universal_approximation_theorem) that neural networks can approximate any smooth function. So given time-series data of the pendulum's positions and velocities, which is governed by differential equations, we may train neural networks and forecast future dynamics.
@@ -161,7 +161,7 @@ where $H_0$ is a constant, the total-energy of the system measured from the init
 
 # Implementation of HNN
 
-The codes are available in [github.com/uriyeobi/PIML](https://github.com/uriyeobi/PIML). The implementation is inspired by that of the original paper where the authors use `pytorch`. Here I simplified and redesigned it in `tensorflow.keras`. I also added the energy-conservation parts and the task for double pendulum, which are not included in the paper. 
+The codes are available in [github.com/uriyeobi/hamiltonian_neural_networks](https://github.com/uriyeobi/hamiltonian_neural_networks). The implementation is inspired by that of the original paper where the authors use `pytorch`. Here I simplified and redesigned it in `tensorflow.keras`. I also added the energy-conservation parts and the task for double pendulum, which are not included in the paper. 
 
 As seen from the code below, the output dimension of HNN is 1 (for the scalar $H$), and the loss from Hamilton's equations ($L_{data}$) is calculated by using the gradients (from `forward` method) and permutation matrix (`M`). For activation, `tanh` is used:
 
@@ -234,7 +234,7 @@ Here is sample data:
 - Single pendulum: $q, p, \dot q, \dot p$
 - Double pendulum: $q_1, q_2, p_1, p_2, \dot q_1, \dot q_2, \dot p_1, \dot p_2$
 
-<img src="https://github.com/uriyeobi/PIML/blob/main/notebooks/fig/pendulum_data_sample2.png?raw=true" width="800rem">
+<img src="https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/fig/pendulum_data_sample2.png?raw=true" width="800rem">
 
 The hyperparameters[^3] are set differently for single and double pendulums.
 
@@ -257,14 +257,14 @@ The out-of-sample performances are measured for the following three models:
 
 Here are the results in the test dataset: time-series of $q, p$ and their errors. HNNs are much better than the base MLP. 
 
-<img src="https://github.com/uriyeobi/PIML/blob/main/notebooks/fig/hnn_single_pendulum_pred_act.png?raw=true" width="800rem">
+<img src="https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/fig/hnn_single_pendulum_pred_act.png?raw=true" width="800rem">
 
 
-<img src="https://github.com/uriyeobi/PIML/blob/main/notebooks/fig/hnn_single_pendulum_error_qp.png?raw=true" width="800rem">
+<img src="https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/fig/hnn_single_pendulum_error_qp.png?raw=true" width="800rem">
 
 Here are the errors in total energy (Note that y-axis is in log-scale). The energy-conservation is slightly better in `hnn1`, compared to `hnn1`.
 
-<img src="https://github.com/uriyeobi/PIML/blob/main/notebooks/fig/hnn_single_pendulum_error_energy.png?raw=true" width="600rem">
+<img src="https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/fig/hnn_single_pendulum_error_energy.png?raw=true" width="600rem">
 
 <br>
 
@@ -275,16 +275,16 @@ For the single pendulum, both `hnn0` and `hnn1` predict the time-series pretty w
 
 Here is the predicted and actual time-series of $q1,q2,p1,p2$. As expected, it is not as perfect as the single pendulum. 
 
-<img src="https://github.com/uriyeobi/PIML/blob/main/notebooks/fig/hnn_double_pendulum_pred_act.png?raw=true" width="800rem">
+<img src="https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/fig/hnn_double_pendulum_pred_act.png?raw=true" width="800rem">
 
 We observe that `hnn1` definitely outperforms the others (`hnn0` is not necessarily better than `base`). Recall that these plots are out-of-sample forecasts starting from time step = 1600, so the predictions become less accurate as the time step increases[^5].
 
-<img src="https://github.com/uriyeobi/PIML/blob/main/notebooks/fig/hnn_double_pendulum_error_qp.png?raw=true" width="800rem">
+<img src="https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/fig/hnn_double_pendulum_error_qp.png?raw=true" width="800rem">
 
 
 Lastly, the impact of embedding physics on the performance (i.e., adding the energy conservation penalty $L_{physics}$) is demonstrated in the following energy error plot - it helps conserve the total energy of the forecasted system!
 
-<img src="https://github.com/uriyeobi/PIML/blob/main/notebooks/fig/hnn_double_pendulum_error_energy.png?raw=true" width="600rem">
+<img src="https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/fig/hnn_double_pendulum_error_energy.png?raw=true" width="600rem">
 
 
 # Summary
@@ -298,7 +298,7 @@ Although HNN is a powerful tool, there is a wrinkle in it - the Hamiltonian form
 ****
 
 
-**Codes**: [https://github.com/uriyeobi/PIML](https://github.com/uriyeobi/PIML)
+**Codes**: [https://github.com/uriyeobi/hamiltonian_neural_networks](https://github.com/uriyeobi/hamiltonian_neural_networks)
 
 **Notes**
 

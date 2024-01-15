@@ -89,15 +89,15 @@ def solve_ode(self) -> npt.NDArray[Any]:
 <br>
 Here is the solution (with $m=1.5, L=1, \theta(0)=\frac{80}{180}\pi, \dot\theta(0)=0$). Note that the total energy is preserved over time.
 
-<img src="https://github.com/uriyeobi/PIML/blob/main/notebooks/fig/single_pendulum.gif?raw=true" width="550rem">
+<img src="https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/fig/single_pendulum.gif?raw=true" width="550rem">
 
 The time-series of $\theta$, $\dot\theta$, $x$, and $y$ are periodic curves:
 
-<img src="https://github.com/uriyeobi/PIML/blob/main/notebooks/fig/single_pendulum_time_series.png?raw=true" width="800rem">
+<img src="https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/fig/single_pendulum_time_series.png?raw=true" width="800rem">
 
 We often look at its phase diagram and trajectories:
 
-<img src="https://github.com/uriyeobi/PIML/blob/main/notebooks/fig/single_pendulum_phase_diagram.png?raw=true" width="800rem">
+<img src="https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/fig/single_pendulum_phase_diagram.png?raw=true" width="800rem">
 
 
 
@@ -214,13 +214,13 @@ The equation of motions are implemented and solved similarly, and the solved res
 
 (with $m_1=1.5, m_2=2, L_1=1, L_2=1.5, \theta_1(0)=\frac{60}{180}\pi, \theta_2(0) = \frac{80}{180}\pi, \dot\theta_1(0)=\dot\theta_2(0)=0$)
 
-<img src="https://github.com/uriyeobi/PIML/blob/main/notebooks/fig/double_pendulum.gif?raw=true" width="550rem">
+<img src="https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/fig/double_pendulum.gif?raw=true" width="550rem">
 
 The time series of ($\theta_1$, $\dot\theta_1$), ($\theta_2$, $\dot\theta_2$), ($x_1$, $y_1$), and ($x_2$, $y_2$) are not periodic anymore:
-<img src="https://github.com/uriyeobi/PIML/blob/main/notebooks/fig/double_pendulum_time_series.png?raw=true" width="800rem">
+<img src="https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/fig/double_pendulum_time_series.png?raw=true" width="800rem">
 
 The phase diagram and trajectories shows the coupling relation between $\theta_1$ and $\theta_2$. 
-<img src="https://github.com/uriyeobi/PIML/blob/main/notebooks/fig/double_pendulum_phase_diagram.png?raw=true" width="800rem">
+<img src="https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/fig/double_pendulum_phase_diagram.png?raw=true" width="800rem">
 
 
 # Predicting pendulum *time-series* - ARIMA?
@@ -232,10 +232,10 @@ Here we attempt to predict the time-series of pendulum phase states. [**ARIMA**]
 For simplicity, we focus on predicting $\theta$ of single pendulum and $\theta_1$ of double pendulum. The time-series data is splitted into training and test region, and the predicted values are compared with the actuals in the both regions:
 
 - In-sample: both ARIMA and SARIMA work fine.
-- Out-of-sample: ARIMA fails for single/double pendulums. SARIMA works for single pendulum, but not for double pendulum. I further conducted a [grid search](https://github.com/uriyeobi/PIML/blob/main/notebooks/pendulum_arima.ipynb) for parameters, but couldn't find a SARIMA model that works well for double pendulum predictions.
+- Out-of-sample: ARIMA fails for single/double pendulums. SARIMA works for single pendulum, but not for double pendulum. I further conducted a [grid search](https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/pendulum_arima.ipynb) for parameters, but couldn't find a SARIMA model that works well for double pendulum predictions.
 
 
-<img src="https://github.com/uriyeobi/PIML/blob/main/notebooks/fig/pendulum_arima.png?raw=true" width="800rem">
+<img src="https://github.com/uriyeobi/hamiltonian_neural_networks/blob/main/notebooks/fig/pendulum_arima.png?raw=true" width="800rem">
 
 
 In short, for our double pendulum, (S)ARIMA seems to be fine for curve-fitting, but not for predictions. It is not surprising, since (S)ARIMA cannot approximate all complex dynamics and generalize. (S)ARIMA was tried just as a warm-up.
@@ -252,7 +252,7 @@ In Part 2, we'll adopt neural networks to predict pendulum dynamics. Particularl
 ****
 
 
-**Codes**: [https://github.com/uriyeobi/PIML](https://github.com/uriyeobi/PIML)
+**Codes**: [https://github.com/uriyeobi/hamiltonian_neural_networks](https://github.com/uriyeobi/hamiltonian_neural_networks)
 
 **Notes**
 
